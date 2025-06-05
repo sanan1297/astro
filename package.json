@@ -9,11 +9,20 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/node": "^9.2.2",
     "@astrojs/react": "^4.3.0",
+    "@tailwindcss/vite": "^4.1.8",
     "@types/react": "^18.3.20",
     "@types/react-dom": "^18.3.6",
     "astro": "^5.8.0",
+    "dotenv": "^16.5.0",
+    "mysql2": "^3.14.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.8"
   }
 }

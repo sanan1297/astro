@@ -1,36 +1,25 @@
 ---
-// Component Imports
-import Counter from '../components/Counter';
-const someProps = {
-	count: 0,
-};
+import "../styles/global.css";
+import Container from "../components/Container";
 
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+// API
+import { getMovies } from "../lib/db";
+const movies = await getMovies();
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<style>
-			html,
-			body {
-				font-family: system-ui;
-				margin: 0;
-			}
-			body {
-				padding: 2rem;
-			}
-		</style>
-	</head>
-	<body>
-		<main>
-			<Counter {...someProps} client:visible>
-				<h1>Hello, React!</h1>
-			</Counter>
-		</main>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <main class="h-screen bg-gray-100">
+      <h1 class="text-center text-4xl p-2 mt-2 mb-4 font-bold">Movies</h1>
+      <div class="flex justify-self-center px-4">
+        <Container movies={movies} client:load />
+      </div>
+    </main>
+  </body>
 </html>
