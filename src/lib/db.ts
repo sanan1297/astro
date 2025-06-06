@@ -3,11 +3,10 @@ import 'dotenv/config';
 
 export async function getMovies() {
   const connection = await mysql.createConnection({
-    host: process.env.DB_HOST,
-    port: Number(process.env.DB_PORT),
-    user: process.env.DB_USER,
-    password: process.env.DB_PASS,
-    database: process.env.DB_NAME,
+    host: 'miapp-db.csj8wu0cap2q.us-east-1.rds.amazonaws.com',
+    user: 'admin',
+    password: 'Admin123!',
+    database: 'miappdb',
   });
 
   const [rows] = await connection.execute('SELECT * FROM movies_list');
