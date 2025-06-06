@@ -1,6 +1,7 @@
 export type Movie = {
   title: string;
   description: string;
+  image: string;
 };
 
 interface Props {
@@ -8,12 +9,12 @@ interface Props {
 }
 
 const Card = ({ movie }: Props) => {
-  const { title, description } = movie;
+  const { title, description, image } = movie;
   return (
     <div className="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 transition-transform duration-200 hover:scale-105">
       <div className="shadow-md rounded-t-lg overflow-hidden">
         <img
-          src="https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=2210&quality=70"
+          src={image}
           alt="Scenic View"
           className="w-full h-auto"
         />
