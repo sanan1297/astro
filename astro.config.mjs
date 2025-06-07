@@ -15,7 +15,7 @@ export default defineConfig({
   server: {
     host: "0.0.0.0",
     port: 80,
-    allowedHosts: ['proyectocompnube2025-clb-1675984537.us-east-1.elb.amazonaws.com', 'loadtest-353334504.us-east-1.elb.amazonaws.com/']
+    allowedHosts: ['proyectocompnube2025-clb-1675984537.us-east-1.elb.amazonaws.com', 'loadtest-353334504.us-east-1.elb.amazonaws.com']
   },
   output: "server",
   adapter: adapterNode({
